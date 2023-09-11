@@ -5,9 +5,9 @@ export default {
     extend: {
       colors:{
         buttonBgColor:"#0D0F23",
-        PrimaryColor:"#0D0F23",
-        greenColour:"#0D795C",
-        BgColor:"#EEFOFO",
+        primaryColor:"#0D0F23",
+        greenColor:"#0D795C",
+        bgColor:"#EEFOFO",
         textColor:"B5BCC5"
 
       },
@@ -16,9 +16,6 @@ export default {
       }
     },
   },
-  // theme: {
-  //   extend: {},
-  // },
   plugins: [],
 }
 
