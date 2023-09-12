@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className="header flex items-center">
       <div className="container">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           {/* logo */}
 
           <div>
@@ -36,7 +36,7 @@ const Header = () => {
 
           {/* menu */}
           <div className="navigation">
-            <ul className="menu flex items-center gap-[2.7rem]">
+            <ul className="menu flex items-center gap-[2.7rem] ">
               {
                 navLinks.map((link, index) =>(
                   <li key={index}>
@@ -50,21 +50,21 @@ const Header = () => {
           </div>
 
           {/* nav right */}
-          <div className='flex items-center gap-4'> 
-          <div>
-            </div>
+          <div className=''> 
             <Link to='/'>
-              <figure className='w-[35px] h-[35px] rounded-full cursor-pointer '>
+              <figure className='w-[35px] h-[35px]  rounded-full cursor-pointer '>
                 <img src={userImg} className='w-full rounded-full' alt="" />
               </figure>
             </Link>
           </div>
+          <div  className='flex items-center gap-4'>
           <Link to='/login'>
-            <button className='bg-primaryColor py-2 px-6 text-white font-[600] h-[44px]
+            <button className='bg-primaryColor py-1 px-6 text-white font-[600] h-[35px]
             flex item-cnter justify-center rounded-[50px]'>Login</button>
           </Link>
+          </div>
 
-          <span >
+          <span className='md:hidden' >
             <BiMenu className='w-6 h-6 cursor-pointer'/>
           </span>
 
