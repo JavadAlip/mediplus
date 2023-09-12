@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        buttonBgColor:"#0D0F23",
-        primaryColor:"#0D0F23",
-        greenColor:"#0D795C",
+        buttonBgColor:"#20297D",
+        primaryColor:"#20297D",
+        greenColor:"#02DDA2",
         bgColor:"#EEFOFO",
         textColor:"B5BCC5"
 
