@@ -1,5 +1,6 @@
 import React from 'react';
 import headImg from '../../src/assets/images/doctor1.jpg'
+import About from '../components/About/About';
 
 const Home = () => {
   return <>
@@ -26,8 +27,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* about section */}
-
+    <About/>
     </>
 }
 

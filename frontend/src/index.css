@@ -13,10 +13,13 @@
         @apply max-w-full w-[1100px] px-5 mx-auto
     }
     .btn{
-        @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px]
+        @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px] 
     }
+    .btn:hover {
+         background-color:#05d79e; /* Change the text color to red on hover */
+      }
     .heading{
-        @apply text-[44px] leading-[54px] font-[700] text-greenColor
+        @apply text-[44px] leading-[54px] font-[700] text-primaryColor
     }
     .text_para{
         @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px]
