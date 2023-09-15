@@ -6,7 +6,7 @@ export default {
       colors:{
         buttonBgColor:"#20297D",
         primaryColor:"#20297D",
-        greenColor:"#02DDA2",
+        greenColor:"#05D79E",
         bgColor:"#EEFOFO",
         textColor:"B5BCC5"
 
