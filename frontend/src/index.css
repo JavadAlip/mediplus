@@ -24,10 +24,11 @@
     .text_para{
         @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px]
     }
-    .header{
-        @apply bg-[url('./assets/images/vector5.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[25px]
-        
-    }
+    .header {
+    @apply bg-[url('./assets/images/vector5.png')] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[25px];
+    
+}
+
     .hero__section {
         @apply bg-[url('./assets/images/vector5.png')] bg-no-repeat bg-center bg-cover
     }
