@@ -26,8 +26,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-
     <About/>
+    {/* service section start*/}
+    <section></section>
+     {/* service section end*/}
+
     </>
 }
 
