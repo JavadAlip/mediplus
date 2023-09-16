@@ -2,6 +2,7 @@ import React from 'react';
 import headImg from '../../src/assets/images/doctor1.jpg'
 import About from '../components/About/About';
 import ServiceList from '../components/Services/ServicesList';
+import DoctorList from '../components/Doctors/DoctorList';
 
 const Home = () => {
   return <>
@@ -48,6 +49,7 @@ const Home = () => {
           <p className='text__para text-center'>world-class care for everyone. Our health System offers unmatched,
             expert health care.</p>
         </div>
+        <DoctorList/>
 
      </section>
     {/* our greate doctors end*/}
