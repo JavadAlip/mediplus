@@ -1,6 +1,7 @@
 import React from 'react';
 import headImg from '../../src/assets/images/doctor1.jpg'
 import About from '../components/About/About';
+import ServiceList from '../components/Services/ServicesList';
 
 const Home = () => {
   return <>
@@ -29,7 +30,14 @@ const Home = () => {
     <About/>
     {/* service section start*/}
     <section>
-      <div className='container'></div>
+      <div className='container'>
+        <div className='xl:w-[470px] mx-auto'>
+          <h2 className='heading text-center'>Our medical services</h2>
+          <p className='text__para text-center'>world-class care for everyone. Our health System offers unmatched,
+            expert health care.</p>
+        </div>
+        <ServiceList/>
+      </div>
     </section>
      {/* service section end*/}
 

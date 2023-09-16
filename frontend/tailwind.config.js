@@ -8,7 +8,8 @@ export default {
         primaryColor:"#20297D",
         greenColor:"#05D79E",
         bgColor:"#EEFOFO",
-        textColor:"B5BCC5"
+        textColor:"#848687"
+        
 
       },
       boxShadow:{
