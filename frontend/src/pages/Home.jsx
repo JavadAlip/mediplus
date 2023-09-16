@@ -28,7 +28,9 @@ const Home = () => {
       </section>
     <About/>
     {/* service section start*/}
-    <section></section>
+    <section>
+      <div className='container'></div>
+    </section>
      {/* service section end*/}
 
     </>
