@@ -44,8 +44,68 @@ const Testimonial = () => {
                                 </div>
                             </div>
                         </div>
+                        <p className='text-[16px] leading-7 text-textColor font-[400]'>"it is good medical clinic in this city, i am personaly really satisfied."</p>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div className='py-[30px] px-5 rounded-3'>
+                        <div className='flex items-center gap-[13px]'>
+                            <img src={patientAvatar} alt="" />
+                            <div>
+                                <h4 className='text-[18px] leading-[30px] font-semibold text-primaryColor'>
+                                    Javad Ali</h4>
+                                <div className='flex items-center gap-[2px]'>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                </div>
+                            </div>
+                        </div>
+                        <p className='text-[16px] leading-7 text-textColor font-[400]'>"it is good medical clinic in this city, i am personaly really satisfied."</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='py-[30px] px-5 rounded-3'>
+                        <div className='flex items-center gap-[13px]'>
+                            <img src={patientAvatar} alt="" />
+                            <div>
+                                <h4 className='text-[18px] leading-[30px] font-semibold text-primaryColor'>
+                                    Javad Ali</h4>
+                                <div className='flex items-center gap-[2px]'>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                </div>
+                            </div>
+                        </div>
+                        <p className='text-[16px] leading-7 text-textColor font-[400]'>"it is good medical clinic in this city, i am personaly really satisfied."</p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className='py-[30px] px-5 rounded-3'>
+                        <div className='flex items-center gap-[13px]'>
+                            <img src={patientAvatar} alt="" />
+                            <div>
+                                <h4 className='text-[18px] leading-[30px] font-semibold text-primryColor'>
+                                    Javad Ali</h4>
+                                <div className='flex items-center gap-[2px]'>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                </div>
+                            </div>
+                        </div>
+                        <p className='text-[16px] leading-7 text-textColor font-[400]'>"it is good medical clinic in this city, i am personaly really satisfied."</p>
+                    </div>
+                </SwiperSlide>
+            
+                 
             </Swiper>
            
         </div>
