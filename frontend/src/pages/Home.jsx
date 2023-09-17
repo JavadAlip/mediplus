@@ -3,6 +3,7 @@ import headImg from '../../src/assets/images/doctor1.jpg'
 import About from '../components/About/About';
 import ServiceList from '../components/Services/ServicesList';
 import DoctorList from '../components/Doctors/DoctorList';
+import Testsmonial from '../components/Testimonial/Testimonial';
 
 const Home = () => {
   return <>
@@ -62,6 +63,7 @@ const Home = () => {
             expert health care.</p>
         </div>
 
+      <Testsmonial/>
       </div>
     </section>
     {/* testmonial end*/}
