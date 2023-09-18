@@ -62,7 +62,6 @@ const Home = () => {
           <p className='text__para text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
             expert health care</p>
         </div>
-
       <Testsmonial/>
       </div>
     </section>
