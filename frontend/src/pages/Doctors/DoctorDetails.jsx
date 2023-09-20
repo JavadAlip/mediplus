@@ -19,7 +19,7 @@ const DoctorDetails = () => {
         <div>
           <span className='bg-[#ccf0f3] text-primaryColor py-1 px-6 lg:py-2 lg:px-6 lg
           text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded'>Surgeon</span>
-          <h3 className='text-primaryColor text-[22px] leading-9 mt-3 font-bold '>javad ali</h3>
+          <h3 className='text-primaryColor text-[22px] leading-9 mt-3 font-bold '>Javad ali</h3>
           <div className='flex items-center gap-[6px]'></div>
           <span className='flex items-center gap-[6px] text-[14px] leading-5 
           lg:leading-7 font-semibold text-primaryColor'>
