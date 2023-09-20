@@ -1,4 +1,5 @@
 import React from "react";
+import { formateDate } from "../../utils/formateDate";
 const DoctorAbout=()=>{
     return(
         <div>
@@ -16,12 +17,24 @@ const DoctorAbout=()=>{
                 <ul className="pt-4 md:p-5">
                     <li className="flex flex-col sm:justify-between md:gap-5 mb-[30px]">
                         <div>
-                            <span className="text-textColor text-[15px] leading-6 font-semibold">23 june,2008</span>
-                            <p className="text-[16px] leading">PHD in Surgeon</p>
+                            <span className="text-greenColor text-[15px] leading-6 font-semibold">{formateDate('09-12-2014')}</span>
+                            <p className="text-[16px] leading-6 text-textColor">PHD in Surgeon</p>
+                            <p className="text-[14px] leading-5 font-medium text-textColor">MIMS Hospital, Kottakkal.</p>
                         </div>
+                        
+                    </li>
+                    <li className="flex flex-col sm:justify-between md:gap-5 mb-[30px]">
+                        <div>
+                            <span className="text-greenColor text-[15px] leading-6 font-semibold">{formateDate('11-04-2011')}</span>
+                            <p className="text-[16px] leading-6 text-textColor">PHD in Surgeon</p>
+                            <p className="text-[14px] leading-5 font-medium text-textColor">MIMS Hospital, Kottakkal.</p>
+                        </div>
+                        
                     </li>
                 </ul>
+                
             </div>
+            
         </div>
     )
 }
