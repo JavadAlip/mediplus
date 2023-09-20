@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DocImg from'../../assets/images/doctor-img01.png'
 import starIcon from '../../assets/images/star.png'
+import DoctorAbout from './DoctorAbout'
+import Feedback from './Feedback'
 
 const DoctorDetails = () => {
   const [tab,setTab]=useState('about')
@@ -28,12 +30,25 @@ const DoctorDetails = () => {
           <p className='text__para text-[14px] leading-5 md:text-[15px] mt-2 lg:max-w-[390px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, suscipit praesentium error aut nam eligendi repellendus sed corporis blanditiis beatae quae, debitis tenetur magni pariatur non vero explicabo animi iusto.</p>
         </div>
       </div>
+
+      {/* --------------------------------- */}
       <div className='mt-[50px] border-b border-solid border-[#0066ff34]'>
         <button onClick={()=>setTab('about')}
-        className={`${tab=='about'&&'border-b border-solid border-primaryColor'}py-2 px-5 text-[16px] leading-7 text-primaryColor font-semibold`}>About</button>
+        className={`${tab==='about'&&'border-b border-solid border-primaryColor'}py-2 px-5 text-[16px] leading-7 text-primaryColor font-semibold`}>About</button>
         <button 
          onClick={()=>setTab('feedback')}
-         className={`${tab=='feedback'&&'border-b border-solid border-primaryColor'}py-2 px-5 text-[16px] leading-7 text-primaryColor font-semibold`}>Feedback</button>
+         className={`${tab==='feedback'&&'border-b border-solid border-primaryColor'}py-2 px-5 text-[16px] leading-7 text-primaryColor font-semibold`}>Feedback</button>
+      </div>
+      {/* ----------------------------------- */}
+      <div className='mt-[50px]'>
+        {
+          tab=='about' && <DoctorAbout/>
+          
+        }
+        {
+          tab=='feedback' && <Feedback/>
+        }
+
       </div>
 
     </div>

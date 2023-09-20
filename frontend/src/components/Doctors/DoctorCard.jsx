@@ -4,7 +4,6 @@ import { BsArrowRight } from 'react-icons/bs';
 const DoctorCard = ({doctor}) => {
     const {name,avgRating,specialty,totalPatients,hospital,photo,totalRating}=doctor
 
-
     return (
       <div className="p-3 lg:p-10 mt-2">
         <div >
