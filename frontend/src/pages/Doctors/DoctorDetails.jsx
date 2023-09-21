@@ -51,11 +51,12 @@ const DoctorDetails = () => {
         }
 
       </div>
-      <div>
-        <SidePanel/>
-      </div>
+     
 
     </div>
+    <div>
+        <SidePanel/>
+      </div>
 
   </div>
   
