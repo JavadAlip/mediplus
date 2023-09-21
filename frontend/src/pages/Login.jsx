@@ -23,10 +23,23 @@ const Login = () => {
               name='email'
               value={formData.email}
               onChange={handleInputChange}
-              className='w-full px-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
-              focus:border-b-primaryColor text-[22px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
+              className='w-full px-4 py-3 border-b border-solid border-primaryColor focus:outline-none
+              focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
+          <div className='mb-5'>
+            <input
+              type='password'
+              placeholder='Enter Your Password'
+              name='password'
+              value={formData.password}
+              onChange={handleInputChange}
+              className='w-full px-4 py-3 border-b border-solid border-primaryColor focus:outline-none
+              focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
+            />
+          </div>
+
+          
         </form>
       </div>
     </section>
