@@ -24,7 +24,7 @@ const Login = () => {
               name='email'
               value={formData.email}
               onChange={handleInputChange}
-              className='w-full px-4 py-3 border-b border-solid border-primaryColor focus:outline-none
+              className='w-full py-3 border-b border-solid border-primaryColor focus:outline-none
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
@@ -35,7 +35,7 @@ const Login = () => {
               name='password'
               value={formData.password}
               onChange={handleInputChange}
-              className='w-full px-4 py-3 border-b border-solid border-primaryColor focus:outline-none
+              className='w-full  py-3 border-b border-solid border-primaryColor focus:outline-none
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
