@@ -13,7 +13,7 @@ const DoctorCard = ({doctor}) => {
         lg:mt-5 " style={{textAlign:'left'}}>{name}
         </h2>
         <div className="mt-2 lg:mt-4 flex items-center justify-between">
-            <span className='bg-primaryColor text-white py-1 px-2 lg:py-2 lg:px-6 text-[18px]
+            <span className='bg-[#ccf0f3] text-primaryColor py-1 px-2 lg:py-2 lg:px-6 text-[18px]
             leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded'>{specialty}</span>
             <div className='flex item-center gap-[6px]'>
                 <span className='flex item-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7

@@ -79,7 +79,7 @@ const Header = () => {
           </div>
           <div  className='flex items-center gap-4'>
           <Link to='/login'>
-            <button className=' btn bg-primaryColor py-1 px-6 text-white font-[600] h-[35px]
+            <button className=' btn bg-primaryColor mt-0 py-1 px-6 text-white font-[600] h-[35px]
             flex item-cnter justify-center rounded-[50px]'>Login</button>
           </Link>
           </div>
