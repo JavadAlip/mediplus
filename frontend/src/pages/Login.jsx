@@ -39,17 +39,14 @@ const Login = () => {
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
-          <div className='mb-5 flex items-center justify-between'>
-            <label htmlFor='' className='text-primaryColor font-bold text-[16px] leading-7'>
-              
-            </label>
-          </div>
+          
 
           <div className='mt-7'>
             <button type='submit' className='btn mt-2 w-full bg-primaryColor text-white text-[18px] px-4 py-3
             leading-[30px] rounded-lg'>Login</button>
           </div>
-          <p className='mt-5 text-textColor text-center'>Don't have an account? <Link to='/register ' className="text-primaryColor font-medium ml-1">Signup</Link></p>          
+          <p className='mt-5 text-textColor text-center'>Don't have an account? 
+          <Link to='/register ' className="text-primaryColor font-medium ml-1">Signup</Link></p>          
         </form>
       </div>
     </section>
