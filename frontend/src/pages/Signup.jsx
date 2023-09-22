@@ -29,7 +29,7 @@ const Signup = () => {
 
   }
 
-  return <section className='px-5 xl:px-0'>
+  return <section className='px-5 xl:px-0 pt-[160px]'>
       <div className='max-w-[1170px] mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           {/* img box */}

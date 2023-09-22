@@ -5,7 +5,7 @@ import Testsmonial from '../../components/Testimonial/Testimonial'
 
 const Doctors = () => {
   return <>
-  <section className='bg-[#20297D]'>
+  <section className='bg-[#20297D] pt-[160px]'>
     <div className='container text-center'>
       <h2 className='heading text-[#fff]'>Find a Doctor</h2>
       <div className='max-w-[450px] mt-[30px] max-h-[44px] mx-auto bg-[#fff] rounded-md flex items-center justify-between '>
