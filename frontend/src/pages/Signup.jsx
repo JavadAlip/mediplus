@@ -34,7 +34,7 @@ const Signup = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           {/* img box */}
           <div className='hidden lg:block bg-white rounded-l-lg'>
-            <figure className='rounded-l-lg'>
+            <figure className='rounded-l-lg mt-14'>
               <img src={signupImg} alt="" />
             </figure>
           </div>
