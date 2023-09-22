@@ -12,8 +12,8 @@ const Login = () => {
   };
 
   return (
-    <section className='px-5 lg:px-0 pt-[160px]'>
-      <div className='w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10'>
+    <section className=' hero__section px-5 lg:px-0 pt-[160px]'>
+      <div className=' w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10'>
         <h3 className='text-primaryColor text-[22px] leading-7 font-bold mb-10'>Please <span
           className='text-greenColor'> Login!</span></h3>
         <form className='py-4 md:py-0'>
