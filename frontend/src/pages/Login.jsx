@@ -20,7 +20,7 @@ const Login = () => {
           <div className='mb-5'>
             <input
               type='email'
-              placeholder='Enter Your Email'
+              placeholder='Email'
               name='email'
               value={formData.email}
               onChange={handleInputChange}
@@ -31,7 +31,7 @@ const Login = () => {
           <div className='mb-5'>
             <input
               type='password'
-              placeholder='Enter Your Password'
+              placeholder='Password'
               name='password'
               value={formData.password}
               onChange={handleInputChange}
@@ -39,6 +39,12 @@ const Login = () => {
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
+          <div className='mb-5 flex items-center justify-between'>
+            <label htmlFor='' className='text-primaryColor font-bold text-[16px] leading-7'>
+              
+            </label>
+          </div>
+
           <div className='mt-7'>
             <button type='submit' className='btn mt-2 w-full bg-primaryColor text-white text-[18px] px-4 py-3
             leading-[30px] rounded-lg'>Login</button>
