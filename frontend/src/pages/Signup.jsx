@@ -29,8 +29,9 @@ const Signup = () => {
 
   }
 
-  return <section className='hero__section px-5 xl:px-0 pt-[160px]'>
-      <div className='max-w-[1170px] mx-auto'>
+  return <section className='px-5 xl:px-0 pt-[160px]'>
+    <div className='container'>
+      <div className='max-w-[1170px] mx-auto hero__section'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
           {/* img box */}
           <div className='hidden lg:block bg-white rounded-l-lg'>
@@ -131,6 +132,7 @@ const Signup = () => {
           </div>
 
         </div>
+      </div>
       </div>
     </section>
   
