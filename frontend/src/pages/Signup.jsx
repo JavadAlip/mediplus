@@ -115,12 +115,12 @@ const Signup = () => {
               className='absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer'/>
               <label htmlFor='customFile' className='absolute top-0 left-0 w-full h-full
               flex items-center px-[0.75rem] py-[0.375rem] text-[15px] leading-6 overflow-hidden
-              bg-[#0066ff46] text-primaryColor font-semibold rounded-lg truncate cursor-pointer'>Upload Photo</label>
+              btn mt-0 text-primaryColor font-semibold rounded-lg truncate cursor-pointer'>Upload Photo</label>
             </div>
 
           </div>
           <div className='mt-7'>
-            <button type='submit' className='btn mt-2 w-full bg-primaryColor text-white text-[18px] px-4 py-3
+            <button type='submit' className='btn mt-2 w-full bg-[#ccf0f3] text-primaryColor text-[18px] px-4 py-3
             leading-[30px] rounded-lg'>Sign Up</button>
           </div>
           <p className='mt-5 text-textColor text-center'>Already have an account? 

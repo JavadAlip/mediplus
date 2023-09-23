@@ -36,11 +36,11 @@ const Testimonial = () => {
                                 <h4 className='text-[18px] leading-[30px] font-semibold text-primaryColor'>
                                     Javad Ali</h4>
                                 <div className='flex items-center gap-[2px]'>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
                                 </div>
                             </div>
                         </div>
@@ -55,11 +55,11 @@ const Testimonial = () => {
                                 <h4 className='text-[18px] leading-[30px] font-semibold text-primaryColor'>
                                     Javad Ali</h4>
                                     <div className='flex items-center gap-[2px]'>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
                                 </div>
                             </div>
                         </div>
@@ -74,11 +74,11 @@ const Testimonial = () => {
                                 <h4 className='text-[18px] leading-[30px] font-semibold text-primaryColor'>
                                     Javad Ali</h4>
                                     <div className='flex items-center gap-[2px]'>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
                                 </div>
                             </div>
                         </div>
@@ -93,11 +93,11 @@ const Testimonial = () => {
                                 <h4 className='text-[18px] leading-[30px] font-semibold text-primryColor'>
                                     Javad Ali</h4>
                                     <div className='flex items-center gap-[2px]'>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
-                                    <HiStar className='text-primaryColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
+                                    <HiStar className='text-greenColor w-[18px] h-5'/>
                                 </div>
                             </div>
                         </div>

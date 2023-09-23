@@ -11,8 +11,8 @@ const Doctors = () => {
       <div className='max-w-[450px] mt-[30px] max-h-[44px] mx-auto bg-[#fff] rounded-md flex items-center justify-between '>
         <input type="search"
         className='py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor'
-        placeholder='search doctor' />
-        <button className='btn bg-textColor mt-0 rounded-[0px] rounded-r-md'>Search</button>
+        placeholder='Search Doctor' />
+        <button className='btn bg-[#ccf0f3] mt-0 rounded-[0px] rounded-r-md'>Search</button>
       </div>
     </div>
   </section>

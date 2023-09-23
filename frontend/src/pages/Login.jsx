@@ -42,7 +42,7 @@ const Login = () => {
           
 
           <div className='mt-7'>
-            <button type='submit' className='btn mt-2 w-full bg-primaryColor text-white text-[18px] px-4 py-3
+            <button type='submit' className='btn mt-2 w-full bg-[#ccf0f3] text-primaryColor text-[18px] px-4 py-3
             leading-[30px] rounded-lg'>Login</button>
           </div>
           <p className='mt-5 text-textColor text-center'>Don't have an account? 
