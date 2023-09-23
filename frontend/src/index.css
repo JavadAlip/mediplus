@@ -28,11 +28,18 @@
     @apply fixed bg-[#ccf0f3] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[25px];
     }
    
-
     .hero__section {
         @apply bg-[url('./assets/images/vector5.png')] bg-no-repeat bg-center bg-cover
     }
     
+    .form__label{
+        @apply text-primaryColor font-semibold text-[16px] leading-7 mb-2;
+    }
+    .form__input{
+        @apply w-full px-4 py-3 border border-solid border-[#ccf0f3] focus:outline-none
+        focus:border-primaryColor text-[16px] leading-7 text-textColor placeholder:text-textColor
+        cursor-pointer rounded-md;
+    }
 }
 @media only screen and (max-width:1024px){
     .container{
