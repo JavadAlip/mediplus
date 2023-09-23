@@ -26,6 +26,8 @@ let navLinks = [
 const Header = () => {
   const headerRef=useRef(null)
   const menuRef=useRef(null)
+
+
   const handleStickyHeader=()=>{
     window.addEventListener('scroll',()=>{
       if(document.body.scrollTop>80 || document.documentElement.scrollTop>80){
@@ -69,7 +71,7 @@ const Header = () => {
           </div>
 
           {/* nav right */}
-          <div className=''> 
+          <div className='flex items-center gap-4'> 
           <div className='hidden'>
             <Link to='/'>
               <figure className='w-[35px]  rounded-full cursor-pointer '>

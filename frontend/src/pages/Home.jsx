@@ -32,7 +32,7 @@ const Home = () => {
       </section>
     <About/>
     {/* service section start*/}
-    <section>
+    <section className='pt-[80px]'>
       <div className='container'>
         <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>Our medical services</h2>
@@ -45,7 +45,7 @@ const Home = () => {
      {/* service section end*/}
 
      {/* our greate doctors start*/}
-     <section>
+     <section className='pt-[40px]'>
      <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>Our great doctors</h2>
           <p className='text__para mt-2 text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
@@ -56,7 +56,7 @@ const Home = () => {
     {/* our greate doctors end*/}
 
     {/* testmonial start*/}
-    <section>
+    <section className='pt-[20px]'>
       <div className="container">
       <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>What our patients say</h2>
