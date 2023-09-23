@@ -46,12 +46,14 @@ const Home = () => {
 
      {/* our greate doctors start*/}
      <section className='pt-[40px]'>
+      <div className=''>
      <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>Our great doctors</h2>
           <p className='text__para mt-2 text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
             expert health care.</p>
         </div>
         <DoctorList/>
+        </div>
      </section>
     {/* our greate doctors end*/}
 
@@ -67,7 +69,6 @@ const Home = () => {
       </div>
     </section>
     {/* testmonial end*/}
-
     </>
 }
 

@@ -9,6 +9,7 @@ const DoctorDetails = () => {
   const [tab,setTab]=useState('about')
   return (
   <section className='pt-[160px]'>
+    <div className='container'>
 <div className='max-w-[1170px] px-5 mx-auto'>
   <div className='grid md:grid-cols-3 gap-[50px]'>
 
@@ -60,6 +61,7 @@ const DoctorDetails = () => {
 
   </div>
   
+   </div>
    </div>
   </section>
   )
