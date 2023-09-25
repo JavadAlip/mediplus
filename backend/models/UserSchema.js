@@ -15,3 +15,4 @@ const UserSchema = new mongoose.Schema({
   bloodType: { type: String },
   appointments: [{ type: mongoose.Types.ObjectId, ref: "Appointment" }],
 });
+export default mongoose.model("User", UserSchema);
