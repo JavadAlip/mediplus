@@ -7,7 +7,7 @@ export const register =async(req,res)=>{
     const {email,password,name,role,photo,gender} =req.body
     try {
         let user=null
-        if(role=='patient'){
+        if(role==='patient'){
             user= await User.findOne({email})
         }else if(role=='doctor'){
             user= await Doctor.findOne({email})
@@ -21,7 +21,7 @@ export const register =async(req,res)=>{
         const salt=await bcrypt.genSalt(10)
         const hashPassword= await bcrypt.hash(password,salt)
 
-        if(role=='patient'){
+        if(role==='patient'){
             user=new User({
                 name,
                 email,
@@ -31,7 +31,7 @@ export const register =async(req,res)=>{
                 role
             })
         }
-        if(role=='doctor'){
+        if(role==='doctor'){
             user=new Doctor({
                 name,
                 email,
