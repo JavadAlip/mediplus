@@ -3,7 +3,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors"
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import authRoute from "./Routes/Auth.js"
+import authRoute from "./Routes/Auth.js";
+import userRoute from "./Routes/user.js"
+
 
 dotenv.config()
 const app= express()
@@ -14,6 +16,7 @@ const corsOptions={
 app.get('/',(req,res)=>{
     res.send("Api is working")
 })
+
 //database connection
 mongoose.set('strictQuery',false)
 const connectDB=async()=>{
@@ -30,13 +33,12 @@ const connectDB=async()=>{
     }
 }
 
-
-
 //middleware
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors(corsOptions))
 app.use('/api/v1/Auth',authRoute)
+app.use('/api/v1/users',userRoute)
 
 
 app.listen(port, ()=>{
