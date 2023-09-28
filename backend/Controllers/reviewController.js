@@ -13,6 +13,7 @@ export const getAllReviews = async (req, res)=>{
     }
 }
 
+
 //create review
 export const createReview = async(req,res)=>{
     if(!req.body.doctor)req.body.doctor = req.params.doctorId
