@@ -82,7 +82,7 @@ export const login =async(req,res)=>{
             return res.status(400).json({status:false, message :"Password Not Match"});
         }
         //get token
-        const token = generateToken
+        const token = generateToken(user)
         const {password, role, appointments, ...rest} = user._doc
         res.status(200).json({status:true, message :"Successfully Login",token, data:{...rest}, role});
 
