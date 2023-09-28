@@ -29,6 +29,7 @@ export const authenticate = async (req,res,next)=>{
     }
 };
 
+
 //the user doctor or patient is desiding 
 
 export const restrict = roles => async (req,res,next)=>{
@@ -46,6 +47,5 @@ export const restrict = roles => async (req,res,next)=>{
     if(!roles.includes(user.role)){
         return res.status(401).json({success:false, message:"You're not authorized"})
     }
-
     next();
 }
