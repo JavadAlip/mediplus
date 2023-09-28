@@ -29,7 +29,6 @@ export const authenticate = async (req,res,next)=>{
     }
 };
 
-
 //the user doctor or patient is desiding 
 
 export const restrict = roles => async (req,res,next)=>{
