@@ -5,7 +5,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import authRoute from "./Routes/Auth.js";
 import userRoute from "./Routes/user.js";
-import doctorRoute from "./Routes/doctor.js"
+import doctorRoute from "./Routes/doctor.js";
+import reviewRoute from "./Routes/review.js";
 
 
 dotenv.config()
@@ -34,6 +35,8 @@ const connectDB=async()=>{
     }
 }
 
+
+
 //middleware
 app.use(express.json())
 app.use(cookieParser())
@@ -41,6 +44,7 @@ app.use(cors(corsOptions))
 app.use('/api/v1/Auth',authRoute)
 app.use('/api/v1/users',userRoute)
 app.use('/api/v1/doctors',doctorRoute)
+app.use('api/v1/reviews',reviewRoute)
 
 
 
