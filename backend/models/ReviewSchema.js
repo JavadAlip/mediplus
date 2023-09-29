@@ -6,14 +6,16 @@ const reviewSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "Doctor",
     },
+    
     user: {
       type: mongoose.Types.ObjectId,
       ref: "User",
     },
+
     reviewText: {
       type: String,
       required: true,
-    },
+    },  
     rating: {
       type: Number,
       required: true,
@@ -24,5 +26,13 @@ const reviewSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+reviewSchema.pre(/^find/, function(next){
+  this.populate({
+    path:"user",
+    select: "name photo",
+  });
+  next();
+})
 
 export default mongoose.model("Review", reviewSchema);
