@@ -18,7 +18,7 @@ const About = () => {
               <div className='lg:w-[570px] '>
                 <h2 className='heading'>
                 Proud to be a one of the nations best.</h2>
-                <p className='text_para '>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                <p className='text_para '>We take pride in our national recognition as one of the finest. Dive into our remarkable achievements and unwavering commitment to excellence. Discover the inspiring story behind our relentless pursuit of becoming the leaders in our field. Learn more about our journey towards unparalleled success.</p>
                 <Link to='/'> <button className='btn' >Learn More</button></Link>
               </div>
             </div>
