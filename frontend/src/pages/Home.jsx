@@ -17,7 +17,7 @@ const Home = () => {
               <div className='lg:w-[570px] '>
                 <h1 className='text-[36px] leading-[46px] text-primaryColor font-[700] md:text-[60px] md:leading-[70px]'>
                   Your Healthy life is Our First Priority.</h1>
-                <p className='text_para font-[500] '>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p className='text_para font-[500] '>Welcome to MEDIPLUS, your compassionate medical care platform! Connect with trusted healthcare professionals, easily book appointments, and access personalized medical advice and resources. Your well-being is our priority, and we're here to support your healthcare journey every step of the way.</p>
                 <button className='btn'>Request an Appoinment</button>
               </div>
             </div>
@@ -36,8 +36,7 @@ const Home = () => {
       <div className='container'>
         <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>Our medical services</h2>
-          <p className='text__para mt-1 text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
-            expert health care.</p>
+          <p className='text__para mt-1 text-center text-textColor'>Comprehensive medical services ensuring health, wellness, and peace of mind</p>
         </div>
         <ServiceList/>
       </div>
@@ -49,8 +48,7 @@ const Home = () => {
       <div className=''>
      <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>Our great doctors</h2>
-          <p className='text__para mt-2 text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
-            expert health care.</p>
+          <p className='text__para mt-2 text-center text-textColor'>Dedicated, skilled doctors provide exceptional care, improving lives with expertise</p>
         </div>
         <DoctorList/>
         </div>
@@ -62,8 +60,7 @@ const Home = () => {
       <div className="container">
       <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>What our patients say</h2>
-          <p className='text__para mt-2 text-center text-textColor'>world-class care for everyone. Our health System offers unmatched,
-            expert health care</p>
+          <p className='text__para mt-2 text-center text-textColor'>Patients commend our care: compassionate, life-changing, and highly recommended</p>
         </div>
       <Testsmonial/>
       </div>
