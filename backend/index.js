@@ -1,4 +1,4 @@
-import  express  from "express";
+import express  from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors"
 import mongoose from "mongoose";
@@ -19,6 +19,7 @@ app.get('/',(req,res)=>{
     res.send("Api is working")
 })
 
+
 //database connection
 mongoose.set('strictQuery',false)
 const connectDB=async()=>{
@@ -29,13 +30,9 @@ const connectDB=async()=>{
         })
         console.log('mongoDB database is connected')
     } catch (err) {
-        console.log('mongoDB database is connection failed')
-        
-        
+        console.log('mongoDB database is connection failed') 
     }
 }
-
-
 
 //middleware
 app.use(express.json())
@@ -45,7 +42,6 @@ app.use('/api/v1/Auth',authRoute)
 app.use('/api/v1/users',userRoute)
 app.use('/api/v1/doctors',doctorRoute)
 app.use('api/v1/reviews',reviewRoute)
-
 
 
 app.listen(port, ()=>{
