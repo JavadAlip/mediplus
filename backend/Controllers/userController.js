@@ -63,7 +63,7 @@ export const getUserProfile = async(req,res)=>{
         if (!user) {
             return res.status(404).json({success:false, message:"User not found"})
         }
-        const {password,...rest} = user._doc
+        const {password, ...rest} = user._doc
         res.status(200).json({success:true, message:"Profile info is getting", data:{...rest}})
     } catch (error) {
         res.status(500).json({success:false,message:"Something went wrong, cannot get"})
@@ -71,7 +71,7 @@ export const getUserProfile = async(req,res)=>{
     }
 }
 
-export const getMyAppoinment = async(req,res)=>{
+export const getMyAppointments = async(req,res)=>{
     try {
         //step-1 : retrieve Appoinments from booking to specific user
         const bookings = await Booking.find({user:req.userId})
@@ -82,7 +82,7 @@ export const getMyAppoinment = async(req,res)=>{
         //step-3 : retrieve doctors using doctor ids
         const doctors = await Doctor.find({_id: {$in:doctorIds}}).select('-password')
 
-        res.status(200).json({success:true, message:'Appoiments are getting', data:doctors})
+        res.status(200).json({success:true, message:'Appointments are getting', data:doctors})
 
    
     } catch (error) {
