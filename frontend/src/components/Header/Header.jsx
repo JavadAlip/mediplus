@@ -1,8 +1,8 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import logo from '../../assets/images/mediplus1.png';
-import userImg from'../../assets/images/avatar-icon.png';
 import {BiMenu} from 'react-icons/bi';
 import { NavLink, Link } from 'react-router-dom';
+import { authContext } from '../../context/authContext';
 
 let navLinks = [
   {
@@ -24,8 +24,9 @@ let navLinks = [
 ]
 
 const Header = () => {
-  const headerRef=useRef(null)
-  const menuRef=useRef(null)
+  const headerRef=useRef(null);
+  const menuRef=useRef(null);
+  const {user, role, token} = useContext(authContext)
 
 
   const handleStickyHeader=()=>{
@@ -72,20 +73,24 @@ const Header = () => {
 
           {/* nav right */}
           <div className='flex items-center gap-4'> 
-          <div className='hidden'>
-            <Link to='/'>
+          {
+            token && user ? 
+            <div>
+            <Link to={`${role == 'doctor' ? '/doctors/profile/me' :'/users/profile/me'}`}>
               <figure className='w-[35px]  rounded-full cursor-pointer '>
-                <img src={userImg} className='w-full  rounded-full' alt="" />
+                <img src={user?.photo} className='w-full  rounded-full' alt="" />
               </figure>
             </Link>
-          </div>
-          <div  className='flex items-center gap-4'>
+            </div> :  
+            // <div  className='flex items-center gap-4'>
           <Link to='/login'>
             <button className=' btn bg-primaryColor mt-0 py-1 px-6 text-white font-[600] h-[35px]
             flex item-cnter justify-center rounded-[50px]'>Login</button>
           </Link>
-          </div>
+          // </div>
 
+          }
+          
           <span className='md:hidden' onClick={toggleMenu} >
             <BiMenu className='w-6 h-6 cursor-pointer'/>
           </span>
