@@ -11,6 +11,7 @@ const Login = () => {
     email: "",
     password: ""
   });
+  const [passwordError, setPasswordError] = useState('');
 
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
@@ -23,8 +24,20 @@ const Login = () => {
   // login connection start
   const submitHandler = async (event) => {
     event.preventDefault(); // Fix the typo here
-
+    setPasswordError('');
     setLoading(true);
+    
+    const validatePassword = (password) => {
+      // Password should contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number.
+      const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      return passwordRegex.test(password);
+    };
+
+    if (!validatePassword(formData.password)) {
+      setPasswordError('Please enter correct password!');
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch(`${BASE_URL}/api/v1/Auth/login`, {
@@ -86,6 +99,7 @@ const Login = () => {
               className='w-full  py-3 border-b border-solid border-primaryColor focus:outline-none
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
+             <p className="text-red-500">{passwordError}</p>
           </div>
           
 
