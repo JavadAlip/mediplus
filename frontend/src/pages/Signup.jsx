@@ -225,13 +225,11 @@ const Signup = () => {
     setFormData({ ...formData, photo: data.url });
   };
 
-  const validateUsername = (username) => {
-    // Username should contain only alphanumeric characters and be between 4 and 20 characters long.
-    const usernameRegex = /^.{3,15}$/
-    ;
+// Username should contain 3 characters long.
+    const validateUsername = (username) => {
+    const usernameRegex = /^.{3,15}$/;
     return usernameRegex.test(username);
   };
-
 
   const validateEmail = (email) => {
     const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
