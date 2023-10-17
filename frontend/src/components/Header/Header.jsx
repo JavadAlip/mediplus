@@ -20,7 +20,12 @@ let navLinks = [
   {
     path: '/contact',
     display: 'Contact'
-  }
+  },
+  {
+    path: '/chat',
+    display: 'Chat'
+  },
+ 
 ]
 
 const Header = () => {

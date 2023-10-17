@@ -14,11 +14,16 @@ const Profile = ({user}) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: '',
+    // password: '',
     photo: 'null', // Initialize as an empty string
     gender: '',
     bloodType:'',
   });
+
+  //validation
+  const [emailError, setEmailError] = useState('');
+  // const [passwordError, setPasswordError] = useState('');
+  const [usernameError, setUsernameError] = useState('');
 
   const navigate = useNavigate();
   useEffect(()=>{
@@ -37,10 +42,51 @@ const Profile = ({user}) => {
     setFormData({ ...formData, photo: data.url }); // Update formData.photo directly
   };
 
+
+  // Username should contain 3 characters long.
+  const validateUsername = (username) => {
+    const usernameRegex = /^.{3,15}$/;
+    return usernameRegex.test(username);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    return emailRegex.test(email);
+  };
+
+  // const validatePassword = (password) => {
+  //   // Password should contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number.
+  //   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+  //   return passwordRegex.test(password);
+  // };
+
+
   const submitHandler = async (event) => {
     event.preventDefault(); // Fix the typo here
 
+    setEmailError('');
+    // setPasswordError('');
+    setUsernameError('');
     setLoading(true);
+
+    
+    if (!validateEmail(formData.email)) {
+      setEmailError('Invalid email address');
+      setLoading(false);
+      return;
+    }
+
+    // if (!validatePassword(formData.password)) {
+    //   setPasswordError('Password must have at least 8 characters, including one uppercase letter, one lowercase letter, and one number');
+    //   setLoading(false);
+    //   return;
+    // }
+
+    if (!validateUsername(formData.name)) {
+      setUsernameError('Username should contain 3 characters');
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch(`${BASE_URL}/api/v1/users/${user._id}`, {
@@ -77,6 +123,7 @@ const Profile = ({user}) => {
                     onChange={handleInputChange}
                     className="w-full py-3 border-b border-solid border-primaryColor focus:outline-none focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer"
                   />
+                   <p className="text-red-500">{usernameError}</p>
                 </div>
                 <div className="mb-5">
                   <input
@@ -87,8 +134,10 @@ const Profile = ({user}) => {
                     onChange={handleInputChange}
                     className="w-full py-3 border-b border-solid border-primaryColor focus:outline-none focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer"
                   />
+                   <p className="text-red-500">{emailError}</p>
                 </div>
-                <div className="mb-5">
+
+                {/* <div className="mb-5">
                   <input
                     type="password"
                     placeholder="Password"
@@ -97,7 +146,9 @@ const Profile = ({user}) => {
                     onChange={handleInputChange}
                     className="w-full py-3 border-b border-solid border-primaryColor focus:outline-none focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer"
                   />
-                </div>
+                   <p className="text-red-500">{passwordError}</p>
+                </div> */}
+
                 <div className="mb-5">
                   <input
                     type="text"
@@ -139,7 +190,7 @@ const Profile = ({user}) => {
                       name="photo"
                       id="customFile"
                       onChange={handleFileInputChange}
-                      accept=".jpg, .png"
+                      accept=".jpg,.png"
                       className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
                     />
                     <label

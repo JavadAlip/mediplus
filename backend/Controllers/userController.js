@@ -11,8 +11,7 @@ export const updateUser = async(req,res)=>{
         res.status(200).json({success:true,message:"Successfully Updated", data:updateUser})
         
     } catch (error) {
-        res.status(500).json({success:false,message:"Failed to Update", data:updateUser})
-        
+        res.status(500).json({success:false,message:"Failed to Update", data:updateUser})  
     }
 }
 //Delete user profile

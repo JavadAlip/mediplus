@@ -1,5 +1,6 @@
 import User from "../models/UserSchema.js"
 import Doctor from '../models/DoctorSchema.js';
+import Admin from "../models/AdminSchema.js";
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 const generateToken = user =>{
@@ -91,4 +92,33 @@ export const login =async(req,res)=>{
 
         
     }
+}
+
+export const adminLogin = async (req, res)=>{
+    const{name}=req.body
+    try {
+        let user = null
+        const admin = await Admin.findOne({name})
+        if(admin){
+            user=admin
+        }
+
+        if(!user){
+            return res.status(404).json({message :"Not Fount"});
+        }
+
+        // password check
+        const isPasswordMatch = await bcrypt.compare(req.body.password,user.password)
+        if(!isPasswordMatch){
+            
+            return res.status(400).json({status:false, message :"Password Not Match"});
+        }
+
+        
+    } catch (error) {
+        res.status(500).json({status:false, message :"Failed to Login"});
+
+        
+    }
+    
 }
