@@ -5,27 +5,19 @@ import { toast } from 'react-toastify';
 import { authContext } from '../../context/authContext';
 
 const AdminLogin = () => {
-  
- 
-   const [formDataa, setFormDataa]= useState({
-    name:"",
-    password:"",
-   });
-   const [loading, setLoading]= useState(false)
-   const navigate =useNavigate()
-   const {dispatch} = useContext(authContext)
-
-
-   const handleInputChange = (e) => {
+  const [formDataa, setFormDataa] = useState({
+    name: "",
+    password: "",
+  });
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
+  const { dispatch } = useContext(authContext)
+  const handleInputChange = (e) => {
     setFormDataa({ ...formDataa, [e.target.name]: e.target.value });
   };
-
-
-   const submitHandler =async (event)=>{
+  const submitHandler = async (event) => {
     event.preventDefault();
-    
     setLoading(true);
-  
     try {
       const res = await fetch(`${BASE_URL}/api/v1/Auth/login`, {
         method: 'post',
@@ -39,12 +31,10 @@ const AdminLogin = () => {
       if (!res.ok) {
         throw new Error(result.message);
       }
-      
-
       dispatch({
-        type:'LOGIN_SUCCESS',
-        payload:{
-          user:result.data,
+        type: 'LOGIN_SUCCESS',
+        payload: {
+          user: result.data,
         }
       })
       console.log(result, 'login data')
@@ -54,12 +44,8 @@ const AdminLogin = () => {
     } catch (error) {
       toast.error(error.message)
       setLoading(false)
-      
     }
-
-   }
-
-   
+  }
   return (
     <section className=' px-5 lg:px-0 pt-[160px]'>
       <div className=' w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10 hero__section'>
@@ -88,17 +74,13 @@ const AdminLogin = () => {
               focus:border-b-textColor text-[16px] leading-7 text-textColor placeholder:text-textColor rounded-md cursor-pointer'
             />
           </div>
-          
-
           <div className='mt-7'>
             <button type='submit' className='btn mt-2 w-full bg-[#ccf0f3] text-primaryColor text-[18px] px-4 py-3
-            leading-[30px] rounded-lg'>{ loading ? <HashLoader size={25} color='#fff'/> : 'Login'}</button>
+            leading-[30px] rounded-lg'>{loading ? <HashLoader size={25} color='#fff' /> : 'Login'}</button>
           </div>
-                  
         </form>
       </div>
     </section>
   );
 }
-
 export default AdminLogin
