@@ -1,4 +1,3 @@
-
 import './app.css';
 import Layout from './layouts/layout';
 

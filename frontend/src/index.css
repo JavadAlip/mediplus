@@ -3,57 +3,76 @@
 @tailwind utilities;
 
 
-@layer base{
-    section{
+@layer base {
+    section {
         @apply py-[75px]
     }
 }
-@layer components{
-    .container{
+
+@layer components {
+    .container {
         @apply max-w-full w-[1100px] px-5 mx-auto
     }
-    .btn{
-        @apply bg-[#ccf0f3] py-[10px] px-[25px] rounded-[50px] text-primaryColor font-[600] mt-[33px] 
+
+    .btn {
+        @apply bg-[#ccf0f3] py-[10px] px-[25px] rounded-[50px] text-primaryColor font-[600] mt-[33px]
     }
+
     .btn:hover {
-         background-color:#05d79e; /* Change the text color to red on hover */
-      }
-    .heading{
+        background-color: #05d79e;
+        /* Change the text color to red on hover */
+    }
+
+    .heading {
         @apply text-[44px] leading-[54px] font-[700] text-primaryColor
     }
-    .text_para{
+
+    .text_para {
         @apply text-[18px] leading-[30px] font-[400] text-textColor mt-[18px]
     }
+
     .header {
-    @apply fixed bg-[#ccf0f3] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[25px];
+        @apply fixed bg-[#ccf0f3] bg-no-repeat bg-center bg-cover w-full h-[100px] leading-[25px];
     }
-   
+
     .hero__section {
         @apply bg-[url('./assets/images/vector5.png')] bg-no-repeat bg-center bg-cover
     }
-    
-    .form__label{
+
+    .form__label {
         @apply text-primaryColor font-semibold text-[16px] leading-7 mb-2;
     }
-    .form__input{
-        @apply w-full px-4 py-3 border border-solid border-[#ccf0f3] focus:outline-none
-        focus:border-primaryColor text-[16px] leading-7 text-textColor placeholder:text-textColor
-        cursor-pointer rounded-md;
+
+    .form__input {
+        @apply w-full px-4 py-3 border border-solid border-[#ccf0f3] focus:outline-none focus:border-primaryColor text-[16px] leading-7 text-textColor placeholder:text-textColor cursor-pointer rounded-md;
     }
 }
-@media only screen and (max-width:1024px){
-    .container{
+
+@media only screen and (max-width:1024px) {
+    .container {
         @apply w-full
     }
-    section{
+
+    section {
         @apply py-[35px]
     }
 }
-@media only screen and (max-width:768px){
-    .heading{
+
+@media only screen and (max-width:768px) {
+    .heading {
         @apply text-[26px] leading-[36px];
     }
-    .text_para{
+
+    .text_para {
         @apply text-[16px] leading-7 mt-3
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background-color: #f5f2f2;
 }
