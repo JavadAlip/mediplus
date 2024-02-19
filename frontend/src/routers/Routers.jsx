@@ -9,10 +9,11 @@ import DoctorDetails from '../pages/Doctors/DoctorDetails';
 import { Routes, Route } from 'react-router-dom';
 
 import MyAccount from '../Dashboard/user-account/MyAccount'
-import DashBoard from '../Dashboard/doctor-account/DashBoard';
+import Dashboard from '../Dashboard/doctor-account/docDashboard';
 import ProtectRoute from './ProtectRoute';
 
 import AdminLogin from '../pages/Admin/AdminLogin';
+import SuccessPage from '../pages/Doctors/SuccessPage';
 
 const Routers = () => {
   return (
@@ -25,8 +26,10 @@ const Routers = () => {
     <Route path='/register' element={<Signup/>}/>
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/services' element={<Services/>}/> 
+    <Route path='/checkout-success' element={<SuccessPage/>}/>
+
     <Route path='/users/profile/me' element={<ProtectRoute allowedRoles={['patient']}> <MyAccount/></ProtectRoute>}/>
-    <Route path='/doctors/profile/me' element={<ProtectRoute allowedRoles={['doctor']}> <DashBoard/></ProtectRoute> }/>
+    <Route path='/doctors/profile/me' element={<ProtectRoute allowedRoles={['doctor']}> <Dashboard/></ProtectRoute> }/>
     <Route path='/chat' element={<Chat/>}/>
     <Route path='/adminLogin' element={<AdminLogin/>}/>
   </Routes>
