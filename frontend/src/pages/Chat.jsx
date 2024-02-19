@@ -30,7 +30,7 @@ const Chat = () => {
     setNewMessage("");
   }
   return (
-    <section className=' pt-[160px]  bg-gray-100
+    <section className=' pt-[160px] h-screen  bg-gray-100
     flex justify-center items-center'>
       {
         ChatActive ?

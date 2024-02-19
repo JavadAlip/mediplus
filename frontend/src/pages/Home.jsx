@@ -4,6 +4,7 @@ import About from '../components/About/About';
 import ServiceList from '../components/Services/ServicesList';
 import DoctorList from '../components/Doctors/DoctorList';
 import Testsmonial from '../components/Testimonial/Testimonial';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return <>
@@ -15,10 +16,10 @@ const Home = () => {
             {/* hero content */}
             <div>
               <div className='lg:w-[570px] '>
-                <h1 className='text-[36px] leading-[46px] text-primaryColor font-[700] md:text-[60px] md:leading-[70px]'>
-                  Your Healthy life is Our First Priority.</h1>
+                <h1 className='text-[36px] leading-[46px] text-primaryColor md:font-[900] font-[900] md:text-[60px] md:leading-[70px]'>
+                  Your healthy life is our first priority.</h1>
                 <p className='text_para font-[500] '>Welcome to MEDIPLUS, your compassionate medical care platform! Connect with trusted healthcare professionals, easily book appointments, and access personalized medical advice and resources. Your well-being is our priority, and we're here to support your healthcare journey every step of the way.</p>
-                <button className='btn'>Request an Appoinment</button>
+                <button className='btn'> <Link to='/doctors'> Take an Appoinment</Link></button>
               </div>
             </div>
             {/* hero images */}
@@ -56,7 +57,7 @@ const Home = () => {
     {/* our greate doctors end*/}
 
     {/* testmonial start*/}
-    <section className='pt-[20px]'>
+    {/* <section className='pt-[20px]'>
       <div className="container">
       <div className='xl:w-[470px] mx-auto'>
           <h2 className='heading text-center'>What our patients say</h2>
@@ -64,7 +65,7 @@ const Home = () => {
         </div>
       <Testsmonial/>
       </div>
-    </section>
+    </section> */}
     {/* testmonial end*/}
     </>
 }

@@ -13,11 +13,12 @@ const Feedback = ({ reviews,totalRating}) => {
             <div key={index} className="flex justify-between gap-10 mb-[30px]">
             <div className="flex gap-3">
                 <figure className="w-10 h-10 rounded-full">
-                    <img className="w-full" src={review?.user?.photo} alt="" /></figure>
+                    <img className=" w-10 h-10 rounded-full" src={review?.user?.photo} alt="" />
+                    </figure>
                 <div>
-                    <h5 className="text-[16px] leading-6 text-primaryColor font-bold">{review?.user?.name}</h5>
-                    <p className="text-[14px] leading-6 text-textColor">{formateDate(review?.createdAt)}</p>
-                    <p className="text__para mt-2 font-medium text-[15px] text-textColor">{review.reviewText}</p>
+                    <h5 className="text-[14px] leading-6 text-greenColor font-semibold">{review?.user?.name}</h5>
+                    <p className="text-[11px] leading-6 text-primaryColor font-semibold">{formateDate(review?.createdAt)}</p>
+                    <p className="text__para  font-bold text-[15px] text-primaryColor">{review.reviewText}</p>
                 </div>
             </div>
 
