@@ -1,3 +1,4 @@
+
 import User from "../models/UserSchema.js";
 import Booking from "../models/BookingSchema.js";
 import Doctor from "../models/DoctorSchema.js"
@@ -15,18 +16,22 @@ export const updateUser = async(req,res)=>{
     }
 }
 //Delete user profile
-export const deleteUser = async(req,res)=>{
-    const id = req.params.id
+// Delete user account
+export const deleteUserAccount = async (req, res) => {
+    const userId = req.userId; // Assuming you are storing the user ID in the request object after authentication
 
     try {
-        const deleteUser = await User.findByIdAndDelete(id, {$set:req.body}, {new:true})
-        res.status(200).json({success:true,message:"Successfully deleted", data:deleteUser})
-        
+        // Delete the user
+        await User.findByIdAndDelete(userId);
+        // Optionally, you might also want to delete related data such as bookings, appointments, etc.
+        // Example: await Booking.deleteMany({ user: userId });
+
+        res.status(200).json({ success: true, message: "User account deleted successfully" });
     } catch (error) {
-        res.status(500).json({success:false,message:"Failed to delete"})
-        
+        res.status(500).json({ success: false, message: "Failed to delete user account", error: error.message });
     }
-}
+};
+
 
 //get a single user
 export const getSingleUser = async(req,res)=>{
@@ -55,12 +60,10 @@ export const getAllUser = async(req,res)=>{
 
 export const getUserProfile = async(req,res)=>{
     const userId = req.userId
-
     try {
         const user =await User.findById(userId)
-
         if (!user) {
-            return res.status(404).json({success:false, message:"User not found"})
+            return res.status(404).json({success:false, message:"Not found"})
         }
         const {password, ...rest} = user._doc
         res.status(200).json({success:true, message:"Profile info is getting", data:{...rest}})
@@ -69,25 +72,14 @@ export const getUserProfile = async(req,res)=>{
         
     }
 }
-
-export const getMyAppointments = async(req,res)=>{
+export const getMyAppointments = async (req, res) => {
     try {
-        //step-1 : retrieve Appoinments from booking to specific user
-        const bookings = await Booking.find({user:req.userId})
+        // Retrieve appointments for the specific user and populate the 'doctor' field
+        const appointments = await Booking.find({ user: req.userId }).populate('doctor');
 
-        //step-2 : extract doctor ids from appoinment booking
-        const doctorIds = bookings.map(el=>el.doctor.id)
-
-        //step-3 : retrieve doctors using doctor ids
-        const doctors = await Doctor.find({_id: {$in:doctorIds}}).select('-password')
-
-        res.status(200).json({success:true, message:'Appointments are getting', data:doctors})
-
-   
+        res.status(200).json({ success: true, message: 'Appointments are retrieved successfully', data: appointments });
     } catch (error) {
-        res.status(500).json({success:false,message:"Something went wrong, cannot get"})
-        
-        
+        res.status(500).json({ success: false, message: 'Something went wrong, could not get appointments' });
     }
-  
-}
+};
+
