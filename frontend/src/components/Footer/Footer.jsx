@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='container'>
         <div className='flex justify-between flex-col flex-wrap gap-[30px]' >
           <div>
-            <p className='text-[16px] leading-7 font-[400] text-textColor text-center'>
+            <p className='text-[14px] leading-6  font-semibold text-textColor text-center'>
               © 2023 Designed by <a href="https://github.com/JavadAlip" target="_blank" rel="noopener noreferrer">JAVAD</a> All rights reserved.
             </p>
           </div>
