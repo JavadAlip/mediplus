@@ -101,7 +101,7 @@ const DocDashboard = () => {
               {data.isApproved === 'pending' && (
                 <div className='flex p-4 text-yellow-600 bg-yellow-50 rounded-lg'>
                   <div className='ml-3 text-sm'>
-                    To get approval complete your profile. We will review manually and approve within 2 days
+                    To get approval complete your profile. We will review manually.
                   </div>
                 </div>
               )}
