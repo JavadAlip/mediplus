@@ -149,7 +149,7 @@ const Profile = ({ doctorData }) => {
         e.preventDefault()
 
         addItem("timeSlots", {
-            day: "Saturday", startingTime: "11:00 AM", endingTime: "03:30 PM"
+            day: "Saturday", startingTime: "11:00", endingTime: "03:30"
         })
     }
     // change
@@ -164,7 +164,7 @@ const Profile = ({ doctorData }) => {
 
     return (
         <div>
-            <h2 className='text-primaryColor font-bold text-[24px] leading-9 mb-10'> Profile Information</h2>
+            <h2 className='text-greenColor font-bold text-[24px] leading-9 mb-10'> Profile Information :</h2>
             <form>
                 <div className='mb-5'>
                     <p className='form__label'>Name:</p>
@@ -222,8 +222,9 @@ const Profile = ({ doctorData }) => {
                 </div>
 
                 {/* experiece */}
+                <br />
                 <div className='mb-5'>
-                    <p className='form__label'>Experience:</p>
+                    <p className='form__label text-greenColor'>Experience:</p>
                     {FormData.experiences?.map((item, index) => <div key={index}>
                         <div>
                             <div className='grid grid-cols-2 gap-5'>
@@ -260,8 +261,9 @@ const Profile = ({ doctorData }) => {
 
 
                 {/* /timeSlots */}
+                <br/>
                 <div className='mb-5'>
-                    <p className='form__label'>Time Slots:</p>
+                    <p className='form__label text-greenColor'>Time Slots:</p>
                     {FormData.timeSlots?.map((item, index) => <div key={index}>
                         <div>
                             <div className='grid grid-cols-2 md:grid-cols-4 mb-[30px] gap-5'>
@@ -299,8 +301,9 @@ const Profile = ({ doctorData }) => {
                     <button onClick={addTimeSlot} className='bg-[#ccf0f3] font-semibold py-2 px-5 rounded-lg text-primaryColor cursor-pointer'>Add TimeSlot</button>
                 </div>
 
-
-                <p className='form__label'>About:</p>
+                {/* about section */}
+                <br />
+                <p className='form__label text-greenColor'>About:</p>
                 <textarea name="about" rows="10" value={FormData.about} placeholder='Write about you ...'
                     onChange={handleInputChange} className='form__input text-[14px]'></textarea>
                 {/* <div className='mb-5 flex items-center gap-3'></div> */}
@@ -330,7 +333,7 @@ const Profile = ({ doctorData }) => {
                 </div>
 
                 <div className='mt-7'>
-                    <button type='submit' onClick={updateProfileHandler} className='bg-[#ccf0f3] text-primaryColor text-[18px] leading-[30px] w-full py-3 px-4 font-semibold rounded-lg'>Update Profile</button>
+                    <button type='submit' onClick={updateProfileHandler} className='bg-[#ccf0f3] btn text-primaryColor text-[18px] leading-[30px] w-full py-3 px-4 font-semibold rounded-lg'>Update Profile</button>
                 </div>
             </form>
         </div>
