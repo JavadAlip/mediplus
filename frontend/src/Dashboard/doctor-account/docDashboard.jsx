@@ -80,7 +80,7 @@ import Error from '../../components/Error/Error';
 import useGetProfile from '../../Hooks/useFetchData';
 import { BASE_URL } from '../../config';
 import Tabs from './Tabs';
-import starIcon from '../../assets/images/star.png';
+import starIcon from '../../assets/images/Star.png';
 import DoctorAbout from '../../pages/Doctors/DoctorAbout';
 import Profile from './Profile';
 import Appointments from './Appoiments';
