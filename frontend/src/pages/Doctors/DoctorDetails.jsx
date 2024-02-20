@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import DocImg from '../../assets/images/doctor-img01.png';
-import starIcon from '../../assets/images/star.png';
+import starIcon from '../../assets/images/Star.png';
 import DoctorAbout from './DoctorAbout';
 import Feedback from './Feedback';
 import SidePanel from './SidePanel';
