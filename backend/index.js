@@ -85,7 +85,7 @@ app.listen(port, () => {
 });
 
 // Routes
-import { register, login, adminLogin } from "./Controllers/adminController.js";
+import { register, login, adminLogin } from "./Controllers/authController.js";
 
 const router = express.Router();
 router.post('/register', register);
