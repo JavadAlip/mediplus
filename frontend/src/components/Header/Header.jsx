@@ -1,5 +1,5 @@
 import { useEffect, useRef, useContext } from 'react';
-import logo from '../../assets/images/mediplus1.png';
+import logo from '../../assets/images/MEDIPLUS1.png';
 import { BiMenu } from 'react-icons/bi';
 import { NavLink, Link } from 'react-router-dom';
 import { authContext } from '../../context/authContext';
