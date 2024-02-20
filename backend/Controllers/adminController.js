@@ -1,4 +1,4 @@
-import Admin from "../models/AdminSchema"
+import Admin from "../models/AdminSchema.js"
 
 export const getAdmin = async (req,res)=>{
     const  id = req.params.id
