@@ -16,7 +16,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://mediplus-wyry.vercel.app",
+        origin: "https://mediplus-booking.vercel.app",
         methods: ["GET", "POST"],
     },
 });
@@ -65,7 +65,7 @@ app.use(cookieParser());
 
 // Define CORS options
 const corsOptions = {
-    origin: 'https://mediplus-wyry.vercel.app',
+    origin: 'https://mediplus-booking.vercel.app',
     methods: ['GET', 'POST'],
 };
 
