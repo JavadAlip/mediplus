@@ -8,9 +8,10 @@
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-const dotenv = require('dotenv')
-dotenv.config()
 
+// Access environment variables directly
+const cloudName = process.env.VITE_CLOUD_NAME
+const uploadPreset = process.env.VITE_UPLOAD_PRESET
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,3 +19,4 @@ export default defineConfig({
     react(),
   ],
 })
+
