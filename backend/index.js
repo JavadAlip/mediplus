@@ -8,12 +8,12 @@ import userRoute from "./Routes/user.js";
 import doctorRoute from "./Routes/doctor.js";
 import reviewRoute from "./Routes/review.js";
 import bookingRoute from "./Routes/booking.js";
-import http from "http";
+import https from "https";
 import { Server } from "socket.io";
 
 const app = express();
 app.use(cors());
-const server = http.createServer(app);
+const server = https.createServer(app);
 const io = new Server(server, {
     cors: {
         origin: "https://mediplus-booking.vercel.app",
