@@ -93,10 +93,8 @@
 // router.post('/adminLogin', adminLogin);
 
 // export default router;
-
-// Backend (Express) code
 import express from "express";
-import cookieParser from "cookie-parser";
+import http from "http";
 import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
@@ -105,12 +103,14 @@ import userRoute from "./Routes/user.js";
 import doctorRoute from "./Routes/doctor.js";
 import reviewRoute from "./Routes/review.js";
 import bookingRoute from "./Routes/booking.js";
-import https from "https";
 import { Server } from "socket.io";
 
 const app = express();
 app.use(cors());
-const server = https.createServer(app);
+
+// Create an HTTP server instance
+const server = http.createServer(app);
+
 const io = new Server(server, {
     cors: {
         origin: "https://mediplus-booking.vercel.app",
@@ -130,21 +130,11 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => console.log("User disconnected"))
 });
 
-server.listen('https://mediplus-92z5.onrender.com', () => {
-  console.log("Server running at port 3000");
-});
-
+// Define port
+const port = process.env.PORT || 3000;
 
 // Load environment variables
 dotenv.config();
-
-// Define port
-const port = process.env.PORT || 8000;
-
-// Root endpoint
-app.get("/", (req, res) => {
-    res.send("API is working");
-});
 
 // Database connection
 const connectDB = async () => {
@@ -161,15 +151,6 @@ const connectDB = async () => {
 
 // Middleware
 app.use(express.json());
-app.use(cookieParser());
-
-// Define CORS options
-const corsOptions = {
-    origin: 'https://mediplus-booking.vercel.app',
-    methods: ['GET', 'POST'],
-};
-
-app.use(cors(corsOptions));
 
 // Define routes
 app.use('/api/v1/Auth', authRoute);
@@ -179,17 +160,9 @@ app.use('/api/v1/reviews', reviewRoute);
 app.use('/api/v1/bookings', bookingRoute);
 
 // Start the server
-app.listen(port, () => {
+server.listen(port, () => {
     connectDB();
     console.log('Server is running on port ' + port);
 });
 
-// Routes
-import { register, login, adminLogin } from "./Controllers/authController.js";
-
-const router = express.Router();
-router.post('/register', register);
-router.post('/login', login);
-router.post('/adminLogin', adminLogin);
-
-export default router;
+export default app;
